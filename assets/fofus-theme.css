@@ -1,0 +1,368 @@
+/* ═══════════════════════════════════════════════════════════════
+   FOFUS Unified Brand Theme — BLUE/WHITE (light mode only)
+   Single source of truth for all FOFUS sites.
+   Served from fofus.in/js/fofus-theme.css with CORS.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── LIGHT (Blue + White) ─────────────────────────────────────── */
+:root,
+[data-theme="light"],
+[data-theme="dark"] {
+  --bg:          #FFFFFF;
+  --bg2:         #F7F8FC;
+  --bg3:         #F0F4FA;
+  --panel:       #FFFFFF;
+  --border:      #E0E6EB;
+  --border2:     #CBD5E1;
+  --dim:         #94A3B8;
+  --muted:       #64748B;
+  --text:        #475569;
+  --bright:      #1E293B;
+  --white:       #0F172A;
+  --gold:        #0C72F4;
+  --gold-l:      #0A5DC2;
+  --gold-bg:     rgba(12,114,244,.08);
+  --gold-border: rgba(12,114,244,.2);
+  --teal:        #0EA5E9;
+  --teal-bg:     rgba(14,165,233,.06);
+  --teal-border: rgba(14,165,233,.2);
+  --green:       #16a34a;
+  --red:         #dc2626;
+  --serif:       'Cormorant Garamond', Georgia, serif;
+  --sans:        'Inter', system-ui, sans-serif;
+  --mono:        'JetBrains Mono', 'Courier New', monospace;
+
+  /* fofus.in subpage vars */
+  --warm-white:      #FFFFFF;
+  --dark-text:        #0F172A;
+  --light-text:       #475569;
+  --terracotta:       #0C72F4;
+  --sand:             #0A5DC2;
+  --deep-green:       #0EA5E9;
+  --fofus-brown:      #64748B;
+  --fofus-gold:       #0C72F4;
+  --fofus-cream:      #FFFFFF;
+  --fofus-dark:       #FFFFFF;
+  --fofus-accent:     #0C72F4;
+  --bg-warm:          #FFFFFF;
+  --text-grey:        #475569;
+  --color-bg-primary: #FFFFFF;
+  --color-text-main:  #0F172A;
+  --color-accent-terracotta: #0C72F4;
+  --color-accent-sand: #0A5DC2;
+  --bg-color:         #FFFFFF;
+  --text-primary:     #0F172A;
+  --accent-ochre:     #0C72F4;
+  --accent-clay:      #0A5DC2;
+  --card-bg:          #FFFFFF;
+  --primary-accent:   #0C72F4;
+  --secondary-accent: #0A5DC2;
+  --text-dark:        #0F172A;
+  --text-light:       #475569;
+
+  /* Tailwind color-scale vars */
+  --color-primary-50:  #EFF6FF;
+  --color-primary-100: #DBEAFE;
+  --color-primary-200: #BFDBFE;
+  --color-primary-300: #93C5FD;
+  --color-primary-400: #60A5FA;
+  --color-primary-500: #0C72F4;
+  --color-primary-600: #0A5DC2;
+  --color-primary-700: #084C9F;
+  --color-primary-800: #063B7A;
+  --color-primary-900: #042A57;
+  --color-primary-950: #021A3D;
+
+  /* Platform vars */
+  --black:    #FFFFFF;
+  --surface:  #F7F8FC;
+  --surface2: #F0F4FA;
+  --gold-dim: #084C9F;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Print/Bambuddy vars */
+  --accent:        #0C72F4;
+  --accent-light:  #60A5FA;
+  --accent-dark:   #084C9F;
+  --status-ok:     #16a34a;
+  --status-error:  #dc2626;
+  --status-warning: #f59e0b;
+  --bg-primary:    #FFFFFF;
+  --bg-secondary:  #F7F8FC;
+  --bg-tertiary:   #F0F4FA;
+  --text-tertiary: #94A3B8;
+  --border-color:  #E0E6EB;
+  --card-shadow:   0 2px 8px rgba(0,0,0,.08);
+  --glow-color:    rgba(12,114,244,.15);
+  --fofus-bg:      #FFFFFF;
+  --fofus-panel:   #FFFFFF;
+  --fofus-border:  #E0E6EB;
+  --fofus-gold:    #0C72F4;
+  --fofus-gold-l:  #0A5DC2;
+  --fofus-text:    #475569;
+  --fofus-bright:  #0F172A;
+  --fofus-white:   #0F172A;
+  --fofus-teal:    #0EA5E9;
+  --color-primary: #0C72F4;
+  --color-primary-hover: #0A5DC2;
+  --color-primary-light: rgba(12,114,244,.08);
+  --color-bg:          #FFFFFF;
+  --color-bg-secondary: #F7F8FC;
+  --color-surface: #FFFFFF;
+  --color-border:  #E0E6EB;
+  --color-text-primary:   #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748B;
+  --color-success:  #0EA5E9;
+  --color-accent:   #0C72F4;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL OVERRIDES — force blue/white theme on all FOFUS sites
+   ═══════════════════════════════════════════════════════════════ */
+
+html, body {
+  background: #FFFFFF !important;
+  color: #1E293B !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: #0F172A !important;
+  font-weight: 600 !important;
+}
+
+a { color: #0C72F4; }
+a:hover { color: #0A5DC2; }
+
+/* ═══════════════════════════════════════════════════════════════
+   SITE-SPECIFIC OVERRIDES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── fofus.in subpages ── */
+[class*="warm-bg"],
+[class*="bg-warm"],
+[class*="card-bg"],
+.warm-white,
+[class*="light-text"],
+[class*="warm-text"] {
+  background: #FFFFFF !important;
+  color: #1E293B !important;
+}
+
+/* ── designai.fofus.in (Tailwind) ── */
+.bg-ink-50, .bg-ink-100, .bg-ink-200, .bg-ink-300 {
+  background: #FFFFFF !important;
+}
+.bg-ink-400, .bg-ink-500 {
+  background: #F7F8FC !important;
+}
+.bg-ink-600, .bg-ink-700 {
+  background: #F0F4FA !important;
+}
+.bg-ink-800, .bg-ink-900, .bg-ink-950 {
+  background: #FFFFFF !important;
+  color: #1E293B !important;
+}
+.text-ink-800, .text-ink-900, .text-ink-950 {
+  color: #0F172A !important;
+}
+.text-ink-600, .text-ink-700 {
+  color: #475569 !important;
+}
+.text-ink-400, .text-ink-500 {
+  color: #64748B !important;
+}
+.text-primary-500, .text-primary-600 {
+  color: #0C72F4 !important;
+}
+.bg-primary-500, .bg-primary-600 {
+  background: #0C72F4 !important;
+  color: #FFFFFF !important;
+}
+.border-ink-300, .border-ink-400 {
+  border-color: #E0E6EB !important;
+}
+
+/* ── print.fofus.in (Bambuddy green → FOFUS blue) ── */
+:root {
+  --color-primary: #0C72F4 !important;
+  --color-primary-hover: #0A5DC2 !important;
+  --color-primary-light: rgba(12,114,244,.08) !important;
+  --color-bg: #FFFFFF !important;
+  --color-bg-secondary: #F7F8FC !important;
+  --color-surface: #FFFFFF !important;
+  --color-border: #E0E6EB !important;
+  --color-text-primary: #0F172A !important;
+  --color-text-secondary: #475569 !important;
+  --color-text-muted: #64748B !important;
+  --color-accent: #0C72F4 !important;
+}
+
+body, #root {
+  background-color: #FFFFFF !important;
+  color: #1E293B !important;
+}
+
+aside, [class*="sidebar"], [class*="drawer"] {
+  background-color: #F7F8FC !important;
+  border-color: #E0E6EB !important;
+}
+
+[class*="card"], [class*="panel"], [class*="surface"] {
+  background-color: #FFFFFF !important;
+  border-color: #E0E6EB !important;
+}
+
+button[class*="primary"], button[class*="accent"], [class*="btn-primary"] {
+  background-color: #0C72F4 !important;
+  color: #FFFFFF !important;
+}
+button[class*="primary"]:hover, button[class*="accent"]:hover {
+  background-color: #0A5DC2 !important;
+}
+
+[class*="accent"]:not([class*="fofus"]) {
+  color: #0C72F4 !important;
+}
+button[class*="bg-"][class*="green"],
+button[class*="bg-"][class*="accent"] {
+  background: #0C72F4 !important;
+  color: #FFFFFF !important;
+}
+
+/* Status indicators */
+[class*="status-active"], [class*="status-running"], [class*="status-printing"] {
+  color: #16a34a !important;
+}
+
+/* Hide Bambuddy-specific branding elements */
+a[href*="github.com"] { display: none !important; }
+a[href="/system"] { display: none !important; }
+img[alt="Bambuddy"] { display: none !important; }
+img[src*="bambuddy_logo"] { display: none !important; }
+img[src*="spoolbuddy_logo"] { display: none !important; }
+
+/* Hide "Report a Bug" floating button */
+button[class*="fixed"][class*="bottom"][class*="right"] {
+  display: none !important;
+}
+
+/* Headers */
+header, .header, .navbar, .toolbar, [class*="header"], [class*="nav-bar"] {
+  background-color: #FFFFFF !important;
+  border-color: #E0E6EB !important;
+}
+
+/* ── store.fofus.in (Shopify → blue/white) ── */
+.site-header,
+.header-wrapper,
+#shopify-section-header,
+#shopify-section-announcement-bar {
+  background: #FFFFFF !important;
+  color: #1E293B !important;
+}
+.site-header__link,
+.site-header__logo a {
+  color: #0C72F4 !important;
+}
+.main-content,
+#MainContent,
+.page-container {
+  background: #FFFFFF !important;
+  color: #1E293B !important;
+}
+.card,
+.product-card,
+.grid__item,
+.collection-card {
+  background: #FFFFFF !important;
+  border-color: #E0E6EB !important;
+}
+.btn,
+.button,
+button {
+  background: #0C72F4 !important;
+  color: #FFFFFF !important;
+  border-color: #0C72F4 !important;
+}
+.btn:hover,
+.button:hover {
+  background: #0A5DC2 !important;
+}
+.price,
+.price__regular,
+.price__sale {
+  color: #0C72F4 !important;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #0F172A !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+}
+body,
+input,
+textarea,
+select {
+  color: #1E293B !important;
+}
+.footer {
+  background: #F7F8FC !important;
+  color: #475569 !important;
+}
+.footer a {
+  color: #0C72F4 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOFUS NAV BAR
+   ═══════════════════════════════════════════════════════════════ */
+#fofus-nav,
+#fofus-universal-nav {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid rgba(12,114,244,.2) !important;
+}
+#fofus-nav a,
+#fofus-universal-nav a {
+  color: #475569 !important;
+}
+#fofus-nav a:hover,
+#fofus-universal-nav a:hover {
+  color: #0C72F4 !important;
+}
+#fofus-nav .fofus-nav-active,
+#fofus-universal-nav .fofus-nav-active {
+  color: #0C72F4 !important;
+}
+
+/* Cross-sell banner */
+#fofus-cross-sell {
+  background: #F7F8FC !important;
+  border-color: rgba(12,114,244,.2) !important;
+}
+#fofus-cross-sell a {
+  color: #0C72F4 !important;
+}
+#fofus-cross-sell h4 {
+  color: #0F172A !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #F7F8FC; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* Selection */
+::selection {
+  background: rgba(12,114,244,.15);
+  color: #0A5DC2;
+}
